@@ -15,7 +15,7 @@ services:
             - "lnd_bitcoin_datadir:/etc/lnd"
             - "lnd_bitcoin_lnbits_datadir:/app/data"
         expose:
-            - "3000"
+            - "5000"
         # command: ["npm", "run", "start:cookie", "--", "/data/.cookie"]
         links:
             - lnd_bitcoin
