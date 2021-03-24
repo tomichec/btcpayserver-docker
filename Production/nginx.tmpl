@@ -44,6 +44,11 @@
 		proxy_pass http://bitcoin_thub:3000/thub;
 	}
 		{{ end }}
+		{{ if (eq $serviceName "bitcoin_lnbits") }}
+	location /thub {
+		proxy_pass http://bitcoin_lnbits:5000/lnbits;
+	}
+		{{ end }}
 		{{ if (eq $serviceName "btcqbo") }}
 	location /btcqbo/ {
 		proxy_pass http://btcqbo:8001;
